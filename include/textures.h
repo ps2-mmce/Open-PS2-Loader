@@ -18,6 +18,7 @@ enum INTERNAL_TEXTURE {
     HDD_ICON,
     ETH_ICON,
     APP_ICON,
+    MMCE_ICON,
     INDEX_0,
     INDEX_1,
     INDEX_2,

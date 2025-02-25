@@ -336,7 +336,7 @@ void mmceLaunchGame(item_list_t *itemList, int id, config_set_t *configSet)
     if (gMMCEEnableGameID) {
 #endif
 
-    // Send GameID to MMCE 
+    // Send GameID to MMCE
     fileXioDevctl(mmcePrefix, 0x8, game->startup, (strlen(game->startup) + 1), NULL, 0);
 
     for (int i = 0; i < 15; i++) {
@@ -396,7 +396,7 @@ static int mmceGetTextId(item_list_t *itemList)
 static int mmceGetIconId(item_list_t *itemList)
 {
     //Reusing BDM icon for now
-    int mode = LOAD0_ICON;
+    int mode = MMCE_ICON;
 
     return mode;
 }

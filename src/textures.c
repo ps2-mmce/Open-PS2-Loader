@@ -20,6 +20,7 @@ extern void *hdd_bd_png;
 extern void *hdd_png;
 extern void *eth_png;
 extern void *app_png;
+extern void *mmce_png;
 extern void *Index_0_png;
 extern void *Index_1_png;
 extern void *Index_2_png;
@@ -143,6 +144,7 @@ static texture_t internalDefault[TEXTURES_COUNT] = {
     {HDD_ICON, "hdd", &hdd_png},
     {ETH_ICON, "eth", &eth_png},
     {APP_ICON, "app", &app_png},
+    {MMCE_ICON, "mmce", &mmce_png},
     {INDEX_0, "Index_0", &Index_0_png},
     {INDEX_1, "Index_1", &Index_1_png},
     {INDEX_2, "Index_2", &Index_2_png},
