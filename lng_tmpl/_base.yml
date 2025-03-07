@@ -712,11 +712,3 @@ gui_strings:
   string: Advanced
 - label: MMCE_SETTINGS
   string: MMCE Settings
-- label: MMCE_WAIT_CYCLES
-  string: Wait cycles after /ACK low
-- label: HINT_MMCE_WAIT_CYCLES
-  string: Lower values may improve performance but result in instabilities
-- label: MMCE_USE_ALARMS
-  string: Use timeout alarms
-- label: HINT_MMCE_USE_ALARMS
-  string: OFF may help performance but can cause MMCE timeouts to result in freezes

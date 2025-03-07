@@ -61,12 +61,12 @@ void DeviceFSInit(void)
 
     //Set port and iso fd
     DPRINTF("Port: %i\n", cdvdman_settings.port);
-    DPRINTF("Ack wait cycles: %i\n", cdvdman_settings.ack_wait_cycles);
-    DPRINTF("Use alarms: %i\n", cdvdman_settings.use_alarms);
+    DPRINTF("Ack wait cycles: %i\n", 0);
+    DPRINTF("Use alarms: %i\n", 0);
 
     fp_mmcedrv_config_set(MMCEDRV_SETTING_PORT, cdvdman_settings.port);
-    fp_mmcedrv_config_set(MMCEDRV_SETTING_ACK_WAIT_CYCLES, cdvdman_settings.ack_wait_cycles);
-    fp_mmcedrv_config_set(MMCEDRV_SETTING_USE_ALARMS, cdvdman_settings.use_alarms);
+    fp_mmcedrv_config_set(MMCEDRV_SETTING_ACK_WAIT_CYCLES, 0);
+    fp_mmcedrv_config_set(MMCEDRV_SETTING_USE_ALARMS, 0);
 
     DPRINTF("Waiting for device...\n");
 

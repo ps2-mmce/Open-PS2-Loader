@@ -94,8 +94,6 @@ struct cdvdman_settings_mmce
     int port;
     int iso_fd;
     //vmc_id is in mcemu struct
-    int ack_wait_cycles;
-    int use_alarms;
 } __attribute__((packed));
 
 #define CDVDMAN_SETTINGS_DEFAULT_COMMON                    \

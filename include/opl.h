@@ -127,8 +127,6 @@ extern int smbCacheSize;
 extern int gMMCESlot;
 extern int gMMCEIGRSlot;
 extern int gMMCEEnableGameID; //Send GameID on game launch
-extern int gMMCEAckWaitCycles;
-extern int gMMCEUseAlarms;
 extern int gEnableILK;
 extern int gEnableMX4SIO;
 extern int gEnableBdmHDD;

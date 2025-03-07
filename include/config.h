@@ -102,8 +102,6 @@ enum CONFIG_INDEX {
 #define CONFIG_OPL_MMCE_SLOT            "mmce_slot"
 #define CONFIG_OPL_MMCEIGR_SLOT         "mmceigr_slot"
 #define CONFIG_OPL_MMCE_GAMEID          "mmce_gameid"
-#define CONFIG_OPL_MMCE_WAIT_CYCLES     "mmce_wait_cylces"
-#define CONFIG_OPL_MMCE_USE_ALARMS      "mmce_use_alarms"
 #define CONFIG_OPL_ENABLE_ILINK         "enable_ilink"
 #define CONFIG_OPL_ENABLE_MX4SIO        "enable_mx4sio"
 #define CONFIG_OPL_ENABLE_BDMHDD        "enable_bdm_hdd"
