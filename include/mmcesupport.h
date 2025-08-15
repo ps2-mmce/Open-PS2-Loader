@@ -14,7 +14,7 @@ typedef struct
     vmc_spec_t specs; /* Card specifications */
 } mmce_vmc_infos_t;
 
-void mmceInit();
+void mmceInit(item_list_t *itemList);
 item_list_t *mmceGetObject(int initOnly);
 void mmceLoadModules(void);
 void mmceLaunchGame(item_list_t *itemList, int fd, config_set_t *configSet);
