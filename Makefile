@@ -79,7 +79,7 @@ IOP_OBJS =	iomanx.o filexio.o ps2fs.o usbd.o bdmevent.o \
 		bdm.o bdmfs_fatfs.o usbmass_bd.o iLinkman.o IEEE1394_bd.o mx4sio_bd.o \
 		ps2atad.o hdpro_atad.o poweroff.o ps2hdd.o xhdd.o genvmc.o lwnbdsvr.o \
 		ps2dev9.o smsutils.o ps2ip.o smap.o isofs.o nbns-iop.o \
-		sio2man.o padman.o mcman.o mcserv.o mmceman.o mmcedrv.o mmceigr.o mmce_sio2.o \
+		sio2man.o padman.o mcman.o mcserv.o mmcesio2.o mmceman.o mmcedrv.o mmceigr.o \
 		httpclient-iop.o netman.o ps2ips.o \
 		bdm_mcemu.o mmce_mcemu.o hdd_mcemu.o smb_mcemu.o \
 		iremsndpatch.o apemodpatch.o f2techioppatch.o cleareffects.o resetspu.o \
@@ -397,6 +397,9 @@ $(EE_ASM_DIR)ee_core.c: ee_core/ee_core.elf | $(EE_ASM_DIR)
 
 $(EE_ASM_DIR)udnl.c: $(UDNL_OUT) | $(EE_ASM_DIR)
 	$(BIN2C) $(UDNL_OUT) $@ udnl_irx
+
+$(EE_ASM_DIR)mmcesio2.c: $(PS2SDK)/iop/irx/mmcesio2.irx | $(EE_ASM_DIR)
+	$(BIN2C) $< $@ $(*F)_irx
 
 $(EE_ASM_DIR)mmceman.c: $(PS2SDK)/iop/irx/mmceman.irx | $(EE_ASM_DIR)
 	$(BIN2C) $< $@ $(*F)_irx

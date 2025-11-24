@@ -55,6 +55,7 @@ void mmceLoadModules(void)
 {
     LOG("MMCESUPPORT LoadModules\n");
     LOG("[MMCEMAN]:\n");
+    sysLoadModuleBuffer(&mmcesio2_irx, size_mmcesio2_irx, 0, NULL);
     sysLoadModuleBuffer(&mmceman_irx, size_mmceman_irx, 0, NULL);
 }
 
@@ -435,9 +436,34 @@ static char *mmceGetPrefix(item_list_t *itemList)
 }
 
 static item_list_t mmceGameList = {
-    MMCE_MODE, 2, 0, 0, MENU_MIN_INACTIVE_FRAMES, MMCE_MODE_UPDATE_DELAY, NULL, NULL, &mmceGetTextId, &mmceGetPrefix, &mmceInit, &mmceNeedsUpdate,
-    &mmceUpdateGameList, &mmceGetGameCount, &mmceGetGame, &mmceGetGameName, &mmceGetGameNameLength, &mmceGetGameStartup, &mmceDeleteGame, &mmceRenameGame,
-    &mmceLaunchGame, &mmceGetConfig, &mmceGetImage, &mmceCleanUp, &mmceShutdown, &mmceCheckVMC, &mmceGetIconId};
+    .mode = MMCE_MODE,
+    .appsPriority = 2,
+    .enabled = 0,
+    .flags = 0,
+    .delay = MENU_MIN_INACTIVE_FRAMES,
+    .updateDelay = MMCE_MODE_UPDATE_DELAY,
+    .priv = NULL,
+    .owner = NULL,
+    .itemTextId = &mmceGetTextId,
+    .itemGetPrefix = &mmceGetPrefix,
+    .itemInit = &mmceInit,
+    .itemNeedsUpdate = &mmceNeedsUpdate,
+    .itemUpdate = &mmceUpdateGameList,
+    .itemGetCount = &mmceGetGameCount,
+    .itemGet = &mmceGetGame,
+    .itemGetName = &mmceGetGameName,
+    .itemGetNameLength = &mmceGetGameNameLength,
+    .itemGetStartup = &mmceGetGameStartup,
+    .itemDelete = &mmceDeleteGame,
+    .itemRename = &mmceRenameGame,
+    .itemLaunch = &mmceLaunchGame,
+    .itemGetConfig = &mmceGetConfig,
+    .itemGetImage = &mmceGetImage,
+    .itemCleanUp = &mmceCleanUp,
+    .itemShutdown = &mmceShutdown,
+    .itemCheckVMC = &mmceCheckVMC,
+    .itemIconId = &mmceGetIconId
+};
 
 void mmceInitSemaphore()
 {
